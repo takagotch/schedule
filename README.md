@@ -90,10 +90,7 @@ class SchedulerTests():
   def test_tag_type_enforcement(self):
 
   def test_clear_by_tag(self):
-
-
-
-
+    every().second.do(make_mock_job(name='job1')).tag('tag')
 
   def test_misconfigured_job_wont_break_scheduler(self):
     scheduler = scheduler.Scheudler()
